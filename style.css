@@ -1,0 +1,140 @@
+/* misc. CSS */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #efefef;
+}
+
+.portfolioOverview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.portfolio {
+    width: 250px;
+    margin: 25px 0;
+}
+
+.portfolio figure {
+    position: relative;
+}
+
+.portfolio img {
+    max-width: 100%;
+}
+
+.portfolio figcaption {
+    position: absolute;
+    top: 80%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #009bf0;
+    font-family: "DejaVu Sans";
+    font-size: 12px;
+    padding: 9px;
+    transition-property: top,bottom;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+.portfolio figcaption:hover{
+    top: 0%;
+}
+
+.portfolio figcaption h5 {
+    position: absolute;
+    padding: 5px;
+    margin: 5px;
+    bottom: 0;
+    left: 0;
+    color: white;
+    display: inline-block;
+}
+
+.portfolio figcaption a {
+    position: absolute;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    text-decoration: none;
+    background-color: black;
+}
+.portfolio figcaption a:hover{
+
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.lightbox_body {
+    width: 400px;
+    position: relative;
+}
+.lightbox_body img {
+    max-width: 100%;
+}
+
+.lightbox_content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 2px;
+    position: relative;
+    text-align: center;
+}
+
+.lightbox_close-btn::after {
+    content: "Close";
+    display: inline-block;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    z-index: 3;
+    width: auto;
+    height: 30px;
+    cursor: pointer;
+    background: #000;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 0 15px;
+    line-height: 30px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.lightbox_close-btn::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.lightbox:target {
+    display: block;
+    top: 25%;
+    left: 40%;
+}
