@@ -40,17 +40,16 @@ body {
     right: 0;
     width: 100%;
     background-color: #009bf0;
-    font-family: "Comic Sans MS";
+    font-family: sans-serif;
     font-size: 12px;
     padding: 9px;
-    transition-property: top,background-color;
+    transition-property: top;
     transition-duration: .5s;
     transition-timing-function: ease-in;
     transition-delay: 0s;
 }
 .portfolio figcaption:hover{
     top: 0%;
-    background-color: darkviolet;
 }
 
 .portfolio figcaption h5 {
@@ -68,8 +67,7 @@ body {
 }
 .portfolio figcaption:hover h5{
     bottom: 42%;
-    left: 25%;
-    font-size: 140%;
+    left: 35%;
     margin: auto;
 }
 
@@ -91,7 +89,7 @@ body {
 }
 .portfolio figcaption:hover a{
     left: 0%;
-    transform: rotateY( 720deg ) rotate(360deg);
+    transform: rotateY( 360deg );
 }
 
 
@@ -157,18 +155,7 @@ body {
 }
 
 .lightbox:target .lightbox_body{
-
-
-    transform:scaleY(0) scaleX(0);
-    animation:openModal 2s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
 
-@keyframes openModal {
-    0% {
-        transform:scaleY(0) scaleX(0) rotate(0deg);
-    }
-    100% {
-        transform:scaleY(1) scaleX(1)  rotate(360deg);
-    }
-}
+
 
